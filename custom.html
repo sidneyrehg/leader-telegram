@@ -60,7 +60,7 @@
 			width: auto!important;
 		}
 		}
-		h3 a {
+		h3 a, h2 a {
 			text-decoration: none;
 			color: #fff;
 		}
@@ -171,13 +171,20 @@
 																				{{/if}}
 																			{{/ifAny}}
 																			<!-- Right Bottom Content -->
-																				<h2 style="Margin:0;Margin-bottom:0;background-color:{{colorCodeSecondary.value}};color:#FEFEFE;font-family:Helvetica,Arial,sans-serif;font-size:22px;font-weight:400;line-height:1.3;margin:0;margin-bottom:8px;padding:4px 8px;text-align:left;word-wrap:normal">Sale</h2>
-																				<p style="Margin:0;Margin-bottom:8px;color:#444;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:1.3;margin:0;margin-bottom:8px;padding:0;text-align:center">ALL Enzymedica<br>
-																				<strong>20% Off</strong></p>
-																				<p style="Margin:0;Margin-bottom:8px;color:#444;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:1.3;margin:0;margin-bottom:8px;padding:0;text-align:center"><a href="https://mothernaturesfood.net/" style="Margin:0;color:#005900;font-family:Helvetica,Arial,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img alt="All Enzymedica - 20% Off" class="aligncenter wp-image-74 size-medium" height="225" src="https://media.ecpc.com/wp-content/uploads/2017/12/enzymedica-300x225.jpg" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:inline-block;margin:1rem auto;max-width:100%;outline:0;text-decoration:none;width:auto" width="300"></a></p>
-																				<p style="Margin:0;Margin-bottom:8px;color:#444;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:1.3;margin:0;margin-bottom:8px;padding:0;text-align:center">ALL Solgar<br>
-																				<strong>20% Off</strong></p>
-																				<p style="Margin:0;Margin-bottom:8px;color:#444;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:1.3;margin:0;margin-bottom:8px;padding:0;text-align:center"><a href="https://mothernaturesfood.net/" style="Margin:0;color:#005900;font-family:Helvetica,Arial,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img alt="All Solgar - 20% Off" class="aligncenter size-medium wp-image-75" height="225" src="https://media.ecpc.com/wp-content/uploads/2017/12/solgar-300x225.jpg" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:inline-block;margin:1rem auto;max-width:100%;outline:0;text-decoration:none;width:auto" width="300"></a></p>
+																			{{#ifAny itemHeadline3.isEnabled itemDescription3.isEnabled}}
+																				{{#if itemHeadline3.isEnabled}}
+																					<h2 style="Margin:0;Margin-bottom:0;background-color:{{colorCodeSecondary.value}};color:#FEFEFE;font-family:Helvetica,Arial,sans-serif;font-size:22px;font-weight:400;line-height:1.3;margin:0;margin-bottom:8px;padding:4px 8px;text-align:left;word-wrap:normal">
+																						{{#if itemHeadline3.linkUrl}}<a href="{{itemHeadline3.linkUrl}}">{{/if}}
+																							{{itemHeadline3.value}}
+																						{{#if itemHeadline3.linkUrl}}</a>{{/if}}
+																					</h2>
+																				{{/if}}
+																				{{#if itemDescription3.isEnabled}}
+																					<p style="Margin:0;Margin-bottom:8px;color:#444;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:1.3;margin:0;margin-bottom:8px;padding:0;text-align:center">
+																						{{{itemDescription3.value}}}
+																					</p>
+																				{{/if}}
+																			{{/ifAny}}
 																			</div>
 																	</th>
 																</tr>
